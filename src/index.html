@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+  <header class="header">
+    <div class="header__container _container">
+      <h1 class="header__title">IP Address Tracker</h1>
+      <form class="header__form form">
+        <input class="form__input" id="input" type="text" placeholder="Search for any IP address or domain">
+        <div class="form__button" id="button"></div>
+      </form>
+    </div>  
+  </header>
+  <main>
+    <div class="main _container">
+      <div class="main__list list">
+        <div class="list__item">
+          <h2 class="list__item-title">IP Address</h2>
+          <div class="list__item-data">192.168.28.555</div>
+        </div>
+        <div class="list__item">
+          <h2 class="list__item-title">Location</h2>
+          <div class="list__item-data">192.168.28.5</div>
+        </div>
+        <div class="list__item">
+          <h2 class="list__item-title">Timezone</h2>
+          <div class="list__item-data">192.168.28.5 <!-- add offset value dynamically using the API --></div>
+        </div>
+        <div class="list__item">
+          <h2 class="list__item-title">ISP</h2>
+          <div class="list__item-data">192.168.28.5</div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="map" id="map"></div>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+<script src="./main.js"></script>  
+</body>
+</html>
