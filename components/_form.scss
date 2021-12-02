@@ -1,0 +1,48 @@
+.form {
+   &__input {
+     width: 100%;
+     height: 58px;
+     padding: 23px 24px;
+     border: none;
+     border-radius: 13px;
+     outline: none;
+     cursor: pointer;
+     color: $very-dark-gray;
+     font-size: 18px;
+     &::placeholder {
+       font-size: 14px;
+       font-family: inherit;
+     }
+   }
+ 
+   &__button {
+     width: 58px;
+     height: 58px;
+     background-color: #111;
+     background-image: url(../src/images/icon-arrow.svg);
+     background-repeat: no-repeat;
+     background-position: center;
+     position: absolute;
+     top: 0;
+     right: 0;
+     border-radius: 0 13px 13px 0;
+     cursor: pointer;
+     transition: 0.2s;
+ 
+     &:hover {
+       background-color: $very-dark-gray;
+     }
+   }
+ }
+ 
+// ========= MEDIA QUERY ============
+
+@media screen and (min-width: 768px) {
+  .form {
+    &__input {
+      &::placeholder {
+        font-size: 18px;
+      }
+    }
+  }
+}
