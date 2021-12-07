@@ -6,7 +6,6 @@
      border: none;
      border-radius: 13px;
      outline: none;
-     cursor: pointer;
      color: $very-dark-gray;
      font-size: 18px;
      &::placeholder {
@@ -25,6 +24,8 @@
      position: absolute;
      top: 0;
      right: 0;
+     outline: none;
+     border: none;
      border-radius: 0 13px 13px 0;
      cursor: pointer;
      transition: 0.2s;

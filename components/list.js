@@ -1,16 +1,20 @@
 function render(data) {
    const {
-     ip,
-     country_code,
-     country_name,
-     region_code,
-     region_name,
-     city,
-     zip,
-     latitude, 
-     longitude,
-     country_flag
-   } = data
+    ip,
+    continent,
+    continent_code,
+    country,
+    country_code,
+    country_flag,
+    country_capital,
+    country_phone,
+    country_neighbours,
+    region,
+    city,
+    latitude,
+    longitude,
+    completed_requests
+ } = data
  
    const ipField = document.querySelector('.list__item #ip');
    const locationField = document.querySelector('.list__item #location');
@@ -18,7 +22,7 @@ function render(data) {
    const coordField = document.querySelector('.list__item #coordinates');
    
    ipField.innerText = ip
-   locationField.innerText = `${city}, ${region_code}, ${zip}`;
+   locationField.innerText = `${city}, ${region}, ${country_code}`;
    flagField.innerHTML = `<img src=${country_flag}>`;
    coordField.innerText = `${latitude}, ${longitude}`;
 };

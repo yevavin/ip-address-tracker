@@ -1,21 +1,28 @@
-import render from '../components/list.js'
 import {getLocation} from './service.js'
-
-const input = document.querySelector('#input')
-const btn = document.getElementById('button')
+import {promptBtn, setCompletedRequests} from '../components/prompt.js';
 
 const isValid = (value) => {
   return /^(([1-9]?\d|1\d\d|25[0-5]|2[0-4]\d)\.){3}([1-9]?\d|1\d\d|25[0-5]|2[0-4]\d)$/.test(value);
 }
 
-input.addEventListener('change', () => {
-  isValid(input.value)
-     ? btn.addEventListener('click', () => getLocation(input.value))
-     : btn.setAttribute('disabled', 'disabled');
- });
+const input = document.querySelector('#input')
+const btn = document.getElementById('button')
 
-const mymap = L.map('map');
+input.addEventListener('input', () => {
+  isValid(input.value) ? btn.removeAttribute('disabled') : btn.setAttribute('disabled', 'disabled')
+});
+
+btn.addEventListener('click', () => getLocation(input.value))
 
 
+window.addEventListener('load', () => getLocation());
 
-//window.addEventListener('load', () => getLocation());
+// ====== Changing control panel location =========
+
+const controlPanel = document.querySelector(".leaflet-top.leaflet-left")
+  ?.removeChild(document.querySelector(".leaflet-top.leaflet-left")?.firstChild);
+
+document.querySelector('.leaflet-bottom.leaflet-left')?.appendChild(controlPanel);
+
+// ====== End of changing control panel location ========
+
