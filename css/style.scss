@@ -3,6 +3,11 @@
 $very-dark-gray: hsl(0, 0%, 17%);
 $dark-gray: hsl(0, 0%, 59%);
 
+:root {
+  --pos: left center;
+  --size: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +17,10 @@ $dark-gray: hsl(0, 0%, 59%);
 body {
   font-family: "Rubik", sans-serif;
   font-size: 18px;
+}
+
+.hidden {
+  display: none;
 }
 
 ._container {
@@ -24,6 +33,7 @@ body {
 @import "../components/_form.scss";
 @import "../components/_list.scss";
 @import "../components/_map.scss";
+@import "../components/_prompt.scss";
 
 // ========= MEDIA QUERY ============
 
