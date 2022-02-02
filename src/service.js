@@ -20,7 +20,7 @@ export const getLocation = async (ip = '') => {
    }
 
    if (!ip_data) {
-      ip_data = await fetch(`http://ipwhois.app/json/${ip}`)
+      ip_data = await fetch(`https://ipwhois.app/json/${ip}`)
          .then(response => response.json())
          .then(data => {
             let _data = {
