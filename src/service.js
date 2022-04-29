@@ -1,5 +1,5 @@
 import render from "../components/list.js"
-import { promptBtn, setCompletedRequests } from "../components/prompt.js"
+import { promptBtn } from "../components/prompt.js"
 
 const mymap = L.map('map');
 
@@ -37,7 +37,7 @@ export const getLocation = async (ip = '') => {
                "city": data.city,
                "latitude": data.latitude,
                "longitude": data.longitude,
-               "completed_requests": data.completed_requests
+               //"completed_requests": data.completed_requests // !!! UPDATED: doesn't exist anymore
             }
             _data = Object.keys(_data).reduce((accum, key) => {
                accum[key] = { stringValue: _data[key].toString() || '' }
@@ -52,7 +52,7 @@ export const getLocation = async (ip = '') => {
             return data
          })
 
-      setCompletedRequests(ip_data.completed_requests)
+      // setCompletedRequests(ip_data.completed_requests)
    }
 
    if (ip_data) {

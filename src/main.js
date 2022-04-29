@@ -1,5 +1,5 @@
 import {getLocation} from './service.js'
-import {promptBtn, setCompletedRequests} from '../components/prompt.js';
+import {promptBtn} from '../components/prompt.js';
 
 const isValid = (value) => {
   return /^(([1-9]?\d|1\d\d|25[0-5]|2[0-4]\d)\.){3}([1-9]?\d|1\d\d|25[0-5]|2[0-4]\d)$/.test(value);

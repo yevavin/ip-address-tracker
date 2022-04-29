@@ -4,8 +4,9 @@ promptBtn.addEventListener('click', () => {
    document.getElementById('prompt-popup').classList.toggle('hidden')
 })
 
-function setCompletedRequests(req) {
-   document.getElementById('completedRequests').innerText = `${req}/10000`
-}
+// UPD: a counter doesn't exist anymore
+// function setCompletedRequests(req) {
+//    document.getElementById('completedRequests').innerText = `${req}/10000`
+// }
 
-export {promptBtn, setCompletedRequests}
+export {promptBtn}
